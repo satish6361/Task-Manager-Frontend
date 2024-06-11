@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, FormWrapper, Title, Input, Button, Link } from './FormStyles';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
