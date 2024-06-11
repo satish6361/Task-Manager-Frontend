@@ -8,7 +8,6 @@ interface TaskCardProps {
   deadline: string;
   priority: number;
   taskid: string;
-  changeRefresh: () => void;
 }
 
 const Card = styled.div<{ priority: number }>`
@@ -49,7 +48,7 @@ const Priority = styled.p<{ priority: number }>`
   color: ${(props) => (props.priority > 5 ? '#ff6347' : '#4682b4')};
 `;
 
-const TaskCard: React.FC<TaskCardProps> = ({ title, description, deadline, priority, taskid, changeRefresh }) => {
+const TaskCard: React.FC<TaskCardProps> = ({ title, description, deadline, priority, taskid }) => {
   const navigate = useNavigate();
 
   const handleCardClick = (taskid: string) => {
